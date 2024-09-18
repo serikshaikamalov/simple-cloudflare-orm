@@ -1,7 +1,5 @@
 # Simple ORM for working with DB on Cloudflare
 
-
-# Usage:
 ## Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
 ```js
 const tables = {
@@ -40,7 +38,7 @@ const simpleORM = new SimpleORM(env.DB, tables)
 ```
 
 
-## Some examples how to make a query
+## Usage. Making a query
 
 ###  Get active users
 
