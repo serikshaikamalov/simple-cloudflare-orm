@@ -5,7 +5,7 @@ npm i simple-cloudflare-orm
 ```
 
 # Usage
-## Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
+Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
 ```js
 const tables = {
     users: {
@@ -43,7 +43,7 @@ const simpleORM = new SimpleORM(env.DB, tables)
 ```
 
 
-## Usage. Making a query
+## Examples
 
 ###  Get active users
 
