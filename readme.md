@@ -2,7 +2,7 @@
 
 
 # Usage:
-## To create an instance of Simple ORM first make sure you define the tables and their columns:
+## Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
 ```js
 const tables = {
     users: {
