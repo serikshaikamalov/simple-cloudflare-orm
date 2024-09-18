@@ -1,5 +1,10 @@
-# Simple ORM for working with DB on Cloudflare
+# Simple ORM / Query Builder for [Cloudflare D1](https://developers.cloudflare.com/d1/).
 
+```bash
+npm i simple-cloudflare-orm
+```
+
+# Usage
 ## Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
 ```js
 const tables = {
