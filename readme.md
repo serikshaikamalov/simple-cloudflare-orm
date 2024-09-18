@@ -6,6 +6,7 @@ npm i simple-cloudflare-orm
 
 # Usage
 Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
+
 ```js
 const tables = {
     users: {
@@ -27,12 +28,12 @@ const tables = {
         roleID: 'text'
     },
     roles: {
-        id: 'TEXT PRIMARY KEY',
+        id: 'text primary key',
         name: 'text',
         orgID: 'text',
         systemName: 'text'
     },
-    // Other tables
+    // Other table definitions
 }
 ```
 
