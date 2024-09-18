@@ -16,9 +16,17 @@ export class SimpleORM {
     prepare(s) {
         return this.db.prepare(s)
     }
-    async getByID(tableName, id) {
-        const response = await this.db.prepare(`SELECT * FROM ${tableName} WHERE id=?`).bind(id).first()
-        return convertToNestedJSON(response)
+    async getByID(tableName, id, options) {
+        const results = await this.findAll(tableName, {
+            ...options,
+            where: [
+                ['id', '=', id]
+            ]
+        })        
+        if (results && results.length === 1) {
+            return results[0]
+        }
+        return null
     }
     async create(tableName, entity) {
         if (!tableName) {
@@ -172,14 +180,14 @@ export class SimpleORM {
         if (String(column).split('.').length === 3) {
             // Searchin in JSON
             const [t, jColumn, c] = String(column).split('.')
-            console.log("columnL", [t, jColumn, c]);
+            console.log("column:", [t, jColumn, c]);
             const columns = this.tables[t]
             const jsonColumn = columns[jColumn]
 
             if (jsonColumn === "json") {
                 column = `json_extract(${t}.${jColumn}, '$.${c}')`
             }
-        } else if (String(column).split('.').length === 0) {
+        } else if (String(column).split('.').length === 1) {
             column = `${tableName}.${column}`
         }
 
