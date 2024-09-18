@@ -1,10 +1,12 @@
 {
   "name": "simple-cloudflare-orm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple ORM for working with DB on Cloudflare",
   "main": "index.js",
+  "homepage": "https://github.com/serikshaikamalov/simple-cloudflare-orm",
   "repository": {
-    "url": "https://github.com/serikshaikamalov/simple-cloudflare-orm"
+    "type": "git",
+    "url": "https://github.com/serikshaikamalov/simple-cloudflare-orm.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
