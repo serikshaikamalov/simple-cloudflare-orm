@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Simple ORM for working with DB on Cloudflare",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/serikshaikamalov/simple-cloudflare-orm"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish"
