@@ -1,5 +1,5 @@
 # Simple ORM for working with DB on Cloudflare
-db - an intances of DB in Cloudflare
+db - an instance of Cloudflare D1
 tables - your tables in format key: value ie:
 
 
