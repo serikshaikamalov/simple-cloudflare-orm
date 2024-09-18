@@ -40,9 +40,9 @@ const simpleORM = new SimpleORM(env.DB, tables)
 ```
 
 
-# Examples
+## Some examples how to make a query
 
-##  Get active users
+###  Get active users
 
 ```js
 const options = {
@@ -53,7 +53,7 @@ const options = {
 cosnt activeUsers = await simpleORM.findAll("users", options)
 ```
 
-## Searching by column name
+### Searching by column name
 ```js
 const options = {
     where: [
@@ -64,7 +64,7 @@ const options = {
 cosnt result = await simpleORM.findAll("users", options)
 ```
 
-## Get new users
+### Get new users
 ```js
 const options = {
     where: [
@@ -77,7 +77,7 @@ const options = {
 cosnt newUsers = await simpleORM.findAll("users", options)
 ```
 
-## Get only first 100 users
+### Get only first 100 users
 ```js
 const options = {
     where: [
@@ -91,7 +91,7 @@ const options = {
 cosnt limitedUsers = await simpleORM.findAll("users", options)
 ```
 
-## Also you can join with other tables
+### Also you can join with other tables
 ```js
 const options = {
      include: [
@@ -127,4 +127,37 @@ The response is:
     }
 ]
 
+```
+
+
+
+## Inserting data
+
+```js
+    const input = {
+        name: 'Berik Shaikamalov',
+        phone: 77075757091,
+        status: "active"
+    }
+    const newUser = await simpleORM.create('users', input)
+```
+
+
+## Updating data
+To update data pass id and data itself
+```js
+    const input = {
+        id: 1,
+        name: 'Berik Shaikamalov',
+        phone: 77075757091,
+        status: "active"
+    }
+    const updatedUser = await simpleORM.update('users', input.id, input)
+```
+
+
+## Deleting data
+To delete user just pass his identifier
+```js
+await simpleORM.update('users', input.id)
 ```
