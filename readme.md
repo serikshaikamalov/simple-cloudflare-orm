@@ -1,10 +1,8 @@
 # Simple ORM for working with DB on Cloudflare
-db - an instance of Cloudflare D1
-tables - your tables in format key: value ie:
 
 
 # Usage:
-## To create an instance of Simple ORM first make sure you defined table and its columns:
+## To create an instance of Simple ORM first make sure you define the tables and their columns:
 ```js
 const tables = {
     users: {
