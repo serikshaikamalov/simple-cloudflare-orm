@@ -6,15 +6,19 @@ npm i simple-cloudflare-orm
 
 # Features
 
-- [x] Find records by query
-- [x] Get record by it's ID
+- [x] Finding records by query
+- [x] Getting record by it's ID
 - [x] Creating a new record
-- [x] Updating a row
-- [x] Deleting a single row
+- [x] Updating a record
+- [x] Deleting a single record
 - [x] Binding with other related tables
 - [x] Selecting specific columns
 - [x] Getting the number of records
 - [x] Searching for a specified pattern in a column
+- [x] Tranforming plain result to nested object
+- [x] Searching in nested json data
+- [ ] Case insensitive searching
+- [ ] Supporting OR/NOT operation
 
 # Usage
 Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
