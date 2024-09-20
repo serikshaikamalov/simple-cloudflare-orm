@@ -163,5 +163,11 @@ To update data pass id and data itself
 ## Deleting data
 To delete user just pass his identifier
 ```js
-await simpleORM.update('users', input.id)
+await simpleORM.delete('users', input.id)
+```
+
+or delete all records of given table
+
+```js
+await simpleORM.deleteAll('users')
 ```
