@@ -22,7 +22,7 @@ export class SimpleORM {
             where: [
                 ['id', '=', id]
             ]
-        })        
+        })
         if (results && results.length === 1) {
             return results[0]
         }
@@ -85,6 +85,15 @@ export class SimpleORM {
         return await this.db.prepare(`DELETE FROM ${tableName} WHERE id=?`)
             .bind(id)
             .run()
+    }
+    async drop(tableName) {
+        const dropped = await this.db.prepare(`DROP TABLE IF EXISTS ${tableName}`)
+            .bind(id)
+            .run()
+        if (dropped?.success) {
+            return tableName
+        }
+        throw new Error(`Something wrong while dropping table ${table}`)
     }
     async deleteAll(tableName) {
         return await this.db.prepare(`DELETE FROM ${tableName}`)
