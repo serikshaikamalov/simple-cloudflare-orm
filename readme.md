@@ -4,6 +4,18 @@
 npm i simple-cloudflare-orm
 ```
 
+# Features
+
+- [x] Find records by query
+- [x] Get record by it's ID
+- [x] Creating a new record
+- [x] Updating a row
+- [x] Deleting a single row
+- [x] Binding with other related tables
+- [x] Selecting specific columns
+- [x] Getting the number of records
+- [x] Searching for a specified pattern in a column
+
 # Usage
 Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
 
@@ -171,3 +183,8 @@ or delete all records of given table
 ```js
 await simpleORM.deleteAll('users')
 ```
+
+
+
+
+  
