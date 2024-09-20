@@ -19,6 +19,8 @@ npm i simple-cloudflare-orm
 - [x] Searching in nested json data
 - [ ] Case insensitive searching
 - [ ] Supporting OR/NOT operation
+- [ ] Bulk creating records
+- [ ] Prepare a demo for testing
 
 # Usage
 Before starting make sure you have D1 Cloudflare database and defined tables with their column definitions
