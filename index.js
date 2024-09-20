@@ -87,9 +87,7 @@ export class SimpleORM {
             .run()
     }
     async drop(tableName) {
-        const dropped = await this.db.prepare(`DROP TABLE IF EXISTS ${tableName}`)
-            .bind(id)
-            .run()
+        const dropped = await this.db.prepare(`DROP TABLE IF EXISTS ${tableName}`).run()
         if (dropped?.success) {
             return tableName
         }
