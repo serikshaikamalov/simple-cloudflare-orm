@@ -246,7 +246,7 @@ export const convertToNestedJSON = (input) => {
                     Object.assign({}, { [properties[1]]: value })
             })
         }
-        acc[key] = value
+        acc[key] = doParse(value)
         return acc
     }, {})
 }

@@ -1,6 +1,6 @@
 {
   "name": "simple-cloudflare-orm",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple ORM for working with DB on Cloudflare",
   "main": "index.js",
   "homepage": "https://github.com/serikshaikamalov/simple-cloudflare-orm",
