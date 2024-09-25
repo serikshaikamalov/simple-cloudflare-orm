@@ -36,6 +36,8 @@ export class SimpleORM {
             entity.id = nanoid();
         }
 
+        entity = stringifyNestedObject(entity)
+
         const columns = Object.entries(entity)
             .reduce((acc, curr) => {
                 return [...acc, curr[0]];
@@ -63,6 +65,7 @@ export class SimpleORM {
             throw new Error('Please provide name of table')
         }
         entity.updatedAt = new Date().getTime()
+        entity = stringifyNestedObject(entity)
 
         const columns = Object.entries(entity).reduce((acc, curr) => {
             return [...acc, `${[curr[0]]}=?`]
@@ -256,4 +259,37 @@ export function doParse(v) {
     } catch (ex) {
         return v
     }
+}
+
+/**
+ * Converts:
+ * 
+ * {
+ *  name: 'Serik',
+ *  age: 30,
+ *  education: {
+ *      id: 1
+ *  }
+ * }
+ * 
+ * ==>
+ * 
+ * {
+ *  name: "Serik",
+ *  age: 30,
+ *  education: "{id: 1}"
+ * 
+ * }
+ *  
+ */
+export const stringifyNestedObject = (obj) => {
+    return Object.entries(obj).reduce((acc, [k, v]) => {
+        if (typeof v === "object") {
+            v = JSON.stringify(v)
+        }
+        return {
+            ...acc,
+            [k]: v
+        }
+    }, {})
 }
