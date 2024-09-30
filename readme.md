@@ -40,9 +40,9 @@ const tables = {
         comment: 'text',
         IDCard: 'json',
         passport: 'json',
-        data: 'JSON',
+        data: 'json',
         createdAt: 'DATETIME DEFAULT CURRENT_TIMESTAMP',
-        updatedAt: 'DATETIME DEFAULT CURRENT_TIMESTAMP'
+        updatedAt: 'DATETIME DEFAULT CURRENT_TIMESTAMP',
         roleID: 'text'
     },
     roles: {
